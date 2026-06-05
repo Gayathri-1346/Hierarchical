@@ -15,8 +15,9 @@ st.set_page_config(
 
 st.title("Wine Classification using Hierarchical Clustering")
 
-# Load Dataset
-df = pd.read_csv("wine_clustering.csv")
+from pathlib import Path
+
+df = pd.read_csv(Path(__file__).parent / "wine_clustering.csv")
 
 # Display Dataset
 st.subheader("Dataset Preview")
